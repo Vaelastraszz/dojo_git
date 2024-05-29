@@ -29,7 +29,7 @@ L'exploration des données permet de comprendre les caractéristiques et les ten
 La modélisation des données implique le développement de modèles prédictifs et descriptifs pour répondre à des questions business spécifiques. Voici quelques approches de feature engineering et de modélisation à considérer :
 
 - **Feature Engineering :**
-  - **RFM (Récence, Fréquence, Montant) :** Calculer les scores RFM pour chaque client afin de segmenter la clientèle en fonction de la récence de leurs achats, de la fréquence de leurs transactions et du montant dépensé.
+  - **RFM (Récence, Fréquence, Montant) :** Calculer les scores RFM pour chaque client afin de segmenter la clientèle en fonction de la récence de leurs achats, de la fréquence de leurs transactions et du montant dépensé / Pour le calcul de la recency vous pouvez utiliser la date la plus récente du dataset plutot que la date d'aujourd'hui.
   - **Segmentation comportementale :** Créer des segments de clients basés sur des comportements d'achat, tels que les catégories de produits préférées, la saisonnalité des achats, etc.
   - **Variables dérivées :** Créer de nouvelles variables à partir des données existantes, comme le nombre moyen de transactions par mois, la valeur moyenne des transactions, etc.
 
@@ -79,13 +79,13 @@ project/
 
 ### 3. Ingénierie des Caractéristiques -> liée à la mosélisation
 
-- Le notebook `modeling.ipynb` peut-être utilisé pour tester le feature engineering
+- Le notebook `notebooks/modeling.ipynb` peut-être utilisé pour tester le feature engineering
 - Utilisez `src/feature_engineering.py` pour automatiser si vous le voulez à l'aide de fonctions la création des caractéristiques pertinentes.
 - Cette étape peut inclure la création de nouvelles variables à partir des données existantes.
 
 ### 4. Entraînement du Modèle
 
-- Le notebook `notebooks/model_training.ipynb` peut-être utilisé pour entrainer et evaluer le modele
+- Le notebook `notebooks/modeling.ipynb` peut-être utilisé pour entrainer et evaluer le modele
 - Comparez les performances des modèles et sélectionnez le meilleur modèle en fonction des métriques d'évaluation.
 - Une fois satisfait du modèle vous pouvez automatiser l'entrainement et la prediction du modèle dans `src/model_training.py`.
 
@@ -118,7 +118,6 @@ https://www.frayssinet.org/2021/06/25/tuto-debutant-faire-une-pull-request-sur-g
    
 6. **Pull Requests** : Une fois le travail terminé, créez des pull requests (PR) de vos branches vers la branche principale du fork.
 7. **Revue de Code** : Les autres membres du groupe doivent revoir les PRs, fournir des commentaires, et approuver les changements.
-8. **Pull Request Finale** : Après approbation de toutes les PRs internes, créez une PR finale du fork vers le dépôt initial.
 
 
 
